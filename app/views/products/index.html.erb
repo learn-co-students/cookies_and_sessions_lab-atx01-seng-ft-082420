@@ -1,0 +1,14 @@
+<h1>Shopping Cart</h1>
+<ul>
+<%= session[:cart].inspect %>
+    <% if false %>
+        <li><%= item %></li>
+    <% end %>
+</ul>
+
+<%= form_tag products_path do %>
+    <%= label_tag :product %>
+    <%= text_field_tag :product %>
+
+    <%= submit_tag "add to cart" %>
+<% end %>
